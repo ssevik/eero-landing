@@ -1,0 +1,115 @@
+.find {
+  display: none;
+
+  @media screen and (min-width: 1440px) {
+    display: block;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    background-color: $bg-slider;
+  }
+}
+
+.find-title {
+  margin-bottom: 40px;
+
+  @extend %title;
+}
+
+.find__list {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 36px;
+}
+
+.find__item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: $slider-text-color;
+
+  cursor: pointer;
+
+  @include transition(background-color);
+
+  &:not(:last-child) {
+    margin-right: 48px;
+  }
+
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 130%;
+    width: 36px;
+    height: 1px;
+
+    background-color: $slider-text-color;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: #00b68c;
+  }
+
+  &:hover::before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+
+    border: 1px solid #00b68c;
+  }
+}
+
+.find__item--namber {
+  color: $acent-text-color;
+
+  font-size: 14px;
+  line-height: 1;
+}
+
+.find__img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 58px;
+}
+
+.find-text {
+  margin-bottom: 49px;
+
+  &__margin {
+    margin-left: 420px;
+  }
+}
+
+.find-btn {
+  display: inline-block;
+  padding-top: 18px;
+  padding-right: 92px;
+  padding-bottom: 18px;
+  padding-left: 92px;
+
+  background-color: $slider-text-color;
+  color: $acent-text-color;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+
+  letter-spacing: 0.11px;
+  text-transform: uppercase;
+
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $main-text-color;
+  }
+}

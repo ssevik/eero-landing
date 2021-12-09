@@ -1,0 +1,3 @@
+@mixin transition($tipe) {
+  transition: $tipe 300ms $animation-cubic-bezier;
+}

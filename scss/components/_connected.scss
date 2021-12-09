@@ -1,0 +1,61 @@
+.connected {
+  padding-top: 60px;
+
+  min-width: 320px;
+  height: 300px;
+  text-align: center;
+
+  color: $acent-text-color;
+
+  background-image: url('../images/connected-bg-1x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url('../images/connected-bg-1x.jpg'), url('../images/connected-bg-2x.jpg');
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 100px;
+
+    height: 400px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-top: 111px;
+
+    height: 480px;
+  }
+}
+
+.connected-title {
+  margin-bottom: 20px;
+
+  @extend %title;
+
+  color: $acent-text-color;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 83px;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 596px;
+  }
+}
+
+.connected-btn {
+  padding-top: 5px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+
+  @extend %btn;
+
+  @media screen and (min-width: 1440px) {
+    padding-top: 17px;
+    padding-right: 37px;
+    padding-bottom: 17px;
+    padding-left: 37px;
+  }
+}

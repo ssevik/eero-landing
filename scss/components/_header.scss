@@ -1,0 +1,167 @@
+.header {
+  position: relative;
+}
+
+.header-top {
+  display: none;
+
+  @media screen and(min-width: 768px) {
+    display: flex;
+    justify-content: center;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    background-color: $acent-bg-color;
+
+    &__text {
+      color: $acent-text-color;
+      font-size: 8px;
+      line-height: 1.64;
+
+      @media screen and(min-width: 1400px) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.header-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.logo__header--svg {
+  padding-top: 10px;
+  margin-right: 50px;
+
+  width: 90px;
+  height: 49px;
+  @media screen and(min-width: 480px) {
+    margin-right: 110px;
+  }
+
+  @media screen and(min-width: 768px) {
+    margin-right: 20px;
+  }
+
+  @media screen and(min-width: 1440px) {
+    margin-right: 194px;
+    margin-left: 36px;
+
+    width: 107px;
+  }
+}
+
+.header-btn {
+  @extend %btn;
+
+  padding-top: 16px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+
+  @media screen and(min-width: 768px) {
+    margin-left: auto;
+  }
+
+  @media screen and(min-width: 1440px) {
+    padding-top: 27px;
+    padding-right: 64px;
+    padding-bottom: 28px;
+    padding-left: 64px;
+  }
+}
+
+.burger-btn {
+  display: inline-flex;
+  margin-left: auto;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  transition: fill 250ms $animation-cubic-bezier;
+
+  &:hover,
+  &:focus {
+    fill: $main-bg-color;
+  }
+
+  @media screen and(min-width: 768px) {
+    display: none;
+  }
+}
+
+.icon__open-burger {
+  display: none;
+}
+
+.is-open .icon__open-burger {
+  display: block;
+}
+
+.is-open .icon__close-burger {
+  display: none;
+}
+
+.header-nav {
+  @media screen and(max-width: 767px) {
+    padding-left: 90px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background: radial-gradient(circle, rgba(150, 153, 168, 1) 0%, rgba(187, 184, 185, 1) 100%);
+
+    @include transition(transform);
+    transform: translateX(-100%);
+
+    &.is-open {
+      transform: translateX(0);
+      z-index: 5;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 40px;
+    }
+    &__link {
+      font-size: 20px;
+
+      @include transition(color);
+
+      &:hover,
+      &:focus {
+        color: $acent-text-color;
+      }
+    }
+  }
+
+  @media screen and(min-width: 768px) {
+    &__list {
+      display: flex;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 15px;
+
+      @media screen and(min-width: 1440px) {
+        margin-right: 35px;
+      }
+    }
+  }
+
+  &__link {
+    color: $main-text-color;
+
+    @media screen and(min-width: 768px) {
+      font-size: 14px;
+    }
+    @media screen and(min-width: 1440px) {
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+.secure {
+  padding-top: 30px;
+  min-width: 320px;
+  height: 300px;
+
+  color: $acent-text-color;
+  background-image: url('../images/secure-bg-1x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    & {
+      background-image: url('../images/secure-bg-2x.jpg');
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+
+    height: 500px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-top: 166px;
+
+    height: 800px;
+  }
+}
+
+.secure-inner {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 56px;
+  }
+}
+
+.secure-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+
+  border: 1px solid $acent-text-color;
+  border-radius: 15px;
+
+  cursor: pointer;
+
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $third-bg-color;
+  }
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 80px;
+    height: 80px;
+
+    border-radius: 25px;
+  }
+}
+
+.secure-item__svg {
+  width: 20px;
+  height: 20px;
+
+  @media screen and (min-width: 1440px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.secure-title {
+  margin-bottom: 44px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+
+  @media screen and (min-width: 1440px) {
+    font-size: 50px;
+  }
+}
+
+.secure-text {
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 90px;
+
+    width: 600px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 118px;
+
+    width: 734px;
+  }
+}
+
+.secure__wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.secure-btn {
+  @extend %btn;
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+
+  @media screen and (min-width: 1440px) {
+    padding-top: 18px;
+    padding-right: 66px;
+    padding-bottom: 18px;
+    padding-left: 66px;
+  }
+}
